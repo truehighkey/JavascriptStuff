@@ -1,8 +1,10 @@
+// Recreation of the game "Black Jack" in javascript.
+
 const J = 10;
 const Q = 10;
 const K = 10;
 
-function createDeck(){
+function createDeck(){     // create a new random deck of cards
     let deck = [];
     for (let i = 0; i< 4; i++){
         for (let number = 1; number < 11; number++) {
@@ -15,7 +17,7 @@ function createDeck(){
     return deck;
 }
 
-function shuffle(deck){
+function shuffle(deck){         // shuffle the cards
     for(let i = 0; i < deck.length; i++)    {
         let randomIndex = Math.floor(Math.random()*52);
         let t = deck[randomIndex];
